@@ -1,0 +1,119 @@
+@mixin icon-header {
+    border-radius: 50%;
+    background-color: var(--white);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    transform: translateX(62%);
+    padding: 4px 6px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.search {
+    &-bar {
+        background-color: #fbfbfb;
+        padding: 30px 29px;
+        border-radius: 20px;
+        position: relative;
+        top: -100px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        display: flex;
+        min-width: var(--width);
+        &-opt {
+            margin: 0 25px;
+        }
+        &-top {
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e7ecf3;
+            display: flex;
+            justify-content: space-between;
+            &-left {
+                display: flex;
+            }
+            &-right {
+                display: flex;
+                &-sec {
+                    margin-left: 25px;
+                }
+
+                & span {
+                    font-family: Poppins;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 23px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: #3b3e44;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        &-bottom {
+            display: flex;
+            padding-top: 26px;
+            &-sec {
+                position: relative;
+            }
+
+            & input {
+                padding-top: 39px;
+                padding-left: 24px;
+                padding-bottom: 12px;
+                border-radius: 8px;
+                opacity: 0.8;
+                border: 1px solid #e7e8ea;
+                margin-right: 8px;
+                margin-left: 0;
+                width: 100%;
+                background-color: #f4f5f7;
+            }
+        }
+
+        &-label {
+            font-family: var(--Poppins-font);
+            font-size: 18px;
+            font-weight: 600;
+            color: #3b3e44;
+            position: relative;
+            z-index: 1;
+            top: 35%;
+            left: 9%;
+            &-icon {
+                @include icon-header();
+            }
+        }
+
+        &-section {
+            margin-right: 32px;
+            &-icon {
+                margin-right: 8px;
+                color: #84878b;
+            }
+
+            & span {
+                font-family: var(--Poppins-font);
+                font-weight: 500;
+                color: #84878b;
+            }
+        }
+
+        &-btn {
+            font-family: Poppins;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 26px;
+            padding: 22px 38px;
+            border-radius: 10px;
+            background-color: #3b71fe;
+            margin-top: 68%;
+            color: #fff;
+        }
+    }
+}

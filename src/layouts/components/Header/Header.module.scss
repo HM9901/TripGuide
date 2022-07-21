@@ -1,0 +1,79 @@
+.wrapper {
+    --height-avatar: 32px;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.header {
+    display: flex;
+    min-height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    &-logo {
+        margin-right: 10px;
+    }
+
+    &-left {
+        display: flex;
+        align-items: center;
+    }
+
+    &-right {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    &-currency {
+        font-family: var(--Roboto-font);
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #84878b;
+    }
+
+    &-avatar {
+        width: var(--height-avatar);
+        margin-left: 20px;
+    }
+
+    &-language {
+        padding: 0 17px 0 14px;
+    }
+
+    &-notify {
+        position: relative;
+        margin-right: 15px;
+        display: block;
+        & span {
+            display: flex;
+            align-items: center;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: var(--white);
+            justify-content: center;
+            width: 13px;
+            height: 13px;
+            font-size: 0.9rem;
+            position: absolute;
+            top: -3px;
+            right: -5px;
+        }
+    }
+
+    &-profile {
+        display: flex;
+        align-items: center;
+        border-left: 1px solid #e7ecf3;
+        height: var(--height-avatar);
+    }
+
+    &-name {
+        font-weight: 500;
+        text-align: left;
+        margin-left: 10px;
+        font-size: 1.4rem;
+    }
+    & svg {
+        margin-left: 17px;
+    }
+}
